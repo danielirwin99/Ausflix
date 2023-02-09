@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Home.css";
 import SearchBar from "../components/SearchBar";
 import HomeImage from "../assets/home_image.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -14,9 +14,7 @@ const Home = () => {
           <span className="ausflix">button</span>
         </h2>
       </div>
-      <Link to="/results">
-        <SearchBar />
-      </Link>
+      <SearchBar />
       <figure className="home__image--container">
         <img className="home__image" src={HomeImage} alt="" />
       </figure>

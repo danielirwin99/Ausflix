@@ -1,5 +1,6 @@
 import React from "react";
 import { BiSearchAlt } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 import "../styles/SearchBar.css";
 
 const SearchBar = ({ searchId, setSearchId, onSearch }) => {

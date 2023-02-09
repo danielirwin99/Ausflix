@@ -62,7 +62,7 @@ const ResultsPage = () => {
                 </div>
               </div>
             ))
-          : movies.map((movie) => (
+          : movies.slice(0, 6).map((movie) => (
               <div
                 className="movies__card"
                 onClick={() => navigate(`${movie.id}`)}

@@ -9,7 +9,7 @@ body {
   margin: 50px auto;
   border: 2px solid rgb(104, 104, 104);
   border-radius: 12px;
-  background-color: rgba(42, 38, 38, 0.6);
+  background-color: rgb(255, 128, 0);
   overflow: hidden;
 }
 
