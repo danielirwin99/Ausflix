@@ -28,7 +28,7 @@ body {
 
 .resultsInfo__description {
   width: 60%;
-  padding: 10px;
+  padding: 10px 20px;
   margin: 30px 20px;
   color: white;
   position: relative;
@@ -76,8 +76,8 @@ body {
   font-size: 20px;
   cursor: pointer;
   transition: 200ms all ease-in-out;
-  background-color: var(--ausflix-color);
-  color: white;
+  background-color: black;
+  color: var(--ausflix-color);
   border: 1px solid var(--ausflix-color);
 }
 .back:hover {
