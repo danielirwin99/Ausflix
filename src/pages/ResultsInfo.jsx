@@ -44,9 +44,7 @@ const ResultsInfo = () => {
         </h1>
         <h2 className="resultsInfo__sub-title">({movie.release_date})</h2>
         <h2 className="resultsInfo__overview">Overview Summary</h2>
-        <p className="resultsInfo__para">
-          {movie.overview}
-        </p>
+        <p className="resultsInfo__para">{movie.overview}</p>
       </div>
     </div>
   );

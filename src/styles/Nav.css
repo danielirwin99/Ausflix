@@ -12,6 +12,7 @@
   align-items: center;
   width: 150px;
   width: 100%;
+  margin-left: 20px;
 }
 
 .logo {
@@ -66,3 +67,5 @@
 .contact:hover {
   text-decoration: none;
 }
+
+

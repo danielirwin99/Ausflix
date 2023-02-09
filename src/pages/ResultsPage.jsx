@@ -14,6 +14,7 @@ const ResultsPage = () => {
   const [pageNumber, setPageNumber] = useState(1);
   const [loading, setLoading] = useState();
   const navigate = useNavigate();
+  const [results, setShowResults] = useState();
 
   const API_KEY = "52a7a71d55639529822b263b27201639";
 
@@ -23,6 +24,7 @@ const ResultsPage = () => {
 
   async function fetchMovies(userId) {
     setLoading(true);
+    setShowResults(true);
     const { data } = await axios
       .get(
         `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${searchId}&page=${pageNumber}&include_adult=false`
@@ -30,6 +32,7 @@ const ResultsPage = () => {
       .catch((e) => console.log(e));
     setMovies(data.results);
     setLoading(false);
+    setShowResults(false);
     console.log(data);
   }
 
@@ -38,11 +41,14 @@ const ResultsPage = () => {
       fetchMovies();
       setLoading();
     }, 300);
-  }, [searchId]);
+  }, [setShowResults]);
 
   return (
     <div className="results__container">
       <SearchBar onSearch={onSearch} setSearchId={setSearchId} />
+      {results ? (
+        <h1 className="movies__header">Showing results of "{searchId}"</h1>
+      ) : null}
 
       <div className="movies__container">
         {loading

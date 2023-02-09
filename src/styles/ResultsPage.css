@@ -7,8 +7,13 @@
   margin: 30px auto;
 }
 
+.movies__header {
+  margin-top: 30px;
+  color: var(--ausflix-color);
+}
+
 .movies__container {
-  margin-top: 100px;
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -82,4 +87,10 @@
 .rating__number {
   margin-left: 10px;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .movies__card {
+    width: 45%;
+  }
 }
