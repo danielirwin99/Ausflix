@@ -84,7 +84,7 @@ const ResultsPage = () => {
                   <div className="rating">
                     <AiFillStar className="rating__star" />
                     <p className="rating__number">
-                      {movie.vote_average || "N/A"}
+                      {movie.vote_average.toFixed(1) || "N/A"}
                     </p>
                   </div>
                 </div>
